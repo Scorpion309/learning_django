@@ -11,5 +11,8 @@
     <i>
         Material author: {{material.author}}. Published {{ material.publish }}
     </i>
+    <p>
+        <a href="{% url 'lesson:share_material' material.id %}">SHARE</a>
+    </p>
 
 {% endblock %}

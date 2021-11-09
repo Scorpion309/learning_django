@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Share material {% endblock %}
+
+{% block content %}
+    {% if sent %}
+        <p>{{ material.title }} has been sent</p>
+    {% else %}
+        <h2>Share {{material.title}} via e-mail</h2>
+        <form action="." method="POST">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="Send !">
+        </form>
+    {% endif %}
+
+
+{% endblock %}
