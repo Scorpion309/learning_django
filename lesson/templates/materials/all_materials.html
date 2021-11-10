@@ -16,7 +16,7 @@ Material list
         Material author: {{material.author}}. Published {{ material.publish }}
     </p>
     <p>
-        {{ material.body|truncatewords:5|linebreaks }}
+        {{ material.body|truncatewords_html:5|linebreaks }}
     </p>
 
     {% endfor %}
